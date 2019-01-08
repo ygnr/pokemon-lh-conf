@@ -15,7 +15,7 @@ module.exports = async function(callback) {
   }
 
   try {
-    await settleExchange(2, 1, 2, "0x73613025e5aC0E563A33891b707d4F504D84b71c");
+    await settleExchange(1, 1, 2, "0x73613025e5aC0E563A33891b707d4F504D84b71c");
   } catch(err) {
     console.error(err);
   }

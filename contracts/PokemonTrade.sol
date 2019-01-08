@@ -85,7 +85,7 @@ contract PokemonTrade is Ownable {
 
   function initiateExchange(uint256 initiatorPokemonId, uint256 settlerPokemonId, address settler) public {
     require(pokemonIdToOwner[initiatorPokemonId] == msg.sender);
-    uint256 exchangeExpiry = now + 1 minutes;
+    uint256 exchangeExpiry = now + 5 minutes;
     uint exchangeId = exchanges.length;
     exchanges.push(Exchange(exchangeId, msg.sender, settler, initiatorPokemonId, settlerPokemonId, exchangeExpiry, false));
     pokemonIdToOwner[initiatorPokemonId] = address(this);

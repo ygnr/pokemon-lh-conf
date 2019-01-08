@@ -8,7 +8,7 @@ module.exports = async function(callback) {
   }
 
   try {
-    await getOwnerById(2);
+    await getOwnerById(1);
   } catch(err) {
     console.error(err);
   }
